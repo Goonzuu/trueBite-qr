@@ -19,32 +19,62 @@
 - Variables de entorno para API URL
 - README con instrucciones
 
-### Comandos para correr local:
+---
 
-```bash
-# 1. Instalar dependencias
-npm install
+## ✅ ETAPA 2 — Estilos TrueBite (COMPLETADA)
 
-# 2. Configurar variables de entorno
-cp .env.example .env
-# Editar .env con NEXT_PUBLIC_API_URL (default: http://localhost:3001/api)
+### Decisiones tomadas:
 
-# 3. Asegurar que el backend está corriendo (ver ../trueBite-qr-back)
+1. **Replicar estilos de TrueBite original**: Misma paleta de colores y configuración
+2. **Tailwind config completo**: Colores personalizados, animaciones, sombras
+3. **Estilos globales**: Mismos estilos de App.css adaptados a Next.js
 
-# 4. Iniciar servidor de desarrollo
-npm run dev
+### Estilos implementados:
 
-# 5. Abrir en navegador:
-# - http://localhost:3000
-```
+#### Paleta de colores:
+- **Primary**: `#B6462C` (rojo terroso)
+- **Secondary**: `#FFD28F` (mostaza suave)
+- **Background**: `#FAF6F1` (blanco cálido)
+- **Text**: `#1C1C1C` (negro suave)
+- **Accent**: `#4E342E` (marrón profundo)
+
+#### Colores semánticos para ratings:
+- **Taste**: `#B6462C` (rojo terroso)
+- **Quality**: `#FFD28F` (mostaza suave)
+- **Value**: `#4E342E` (marrón profundo)
+
+#### Configuración adicional:
+- **Font Family**: Inter
+- **Animaciones**: fade-in, slide-up, pulse-slow
+- **Sombras**: soft, medium, strong
+- **Border Radius**: xl, 2xl, 3xl
+
+#### Estilos globales:
+- Scrollbar personalizado
+- Focus styles para accesibilidad
+- Smooth scrolling
+- Estilos base de body y root
+
+### Archivos actualizados:
+
+- `tailwind.config.ts` - Configuración completa de Tailwind
+- `app/globals.css` - Estilos globales de TrueBite
+- `app/layout.tsx` - Layout con clases de Tailwind
+- `app/page.tsx` - Página de ejemplo con estilos TrueBite
 
 ### Criterios de "DONE" ✅:
 
-- ✅ `npm run dev` levanta sin errores
-- ✅ Cliente API configurado (Axios)
-- ✅ TypeScript compila sin errores
-- ✅ Estructura de carpetas creada
-- ✅ Separado del backend (puede trabajar en paralelo)
+- ✅ Tailwind config replicado de TrueBite original
+- ✅ Paleta de colores completa
+- ✅ Estilos globales aplicados
+- ✅ Animaciones y sombras configuradas
+- ✅ Página de ejemplo con estilos TrueBite
+
+### Notas:
+
+- Los estilos son idénticos a TrueBite original
+- Adaptados para Next.js (App Router)
+- Manteniendo la misma estructura visual
 
 ---
 
