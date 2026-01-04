@@ -1,0 +1,43 @@
+{
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/.cache": true,
+    "**/.cursor": true,
+    "**/.local": true,
+    "**/.m2": true,
+    "**/.npm": true,
+    "**/.rbenv": true,
+    "**/.sdkman": true,
+    "**/.skiko": true,
+    "**/.swiftpm": true,
+    "**/.viminfo": true,
+    "**/.yarnrc": true,
+    "**/.zcompdump": true,
+    "**/.zsh_history": true,
+    "**/.zsh_sessions": true,
+    "**/.zshrc": true,
+    "**/Applications": true,
+    "**/Desktop": true,
+    "**/Documents": true,
+    "**/Library": true,
+    "**/Movies": true,
+    "**/Music": true,
+    "**/Pictures": true,
+    "**/Project": true,
+    "**/Public": true,
+    "**/.Trash": true,
+    "**/Downloads": true
+  },
+  "search.exclude": {
+    "**/.gradle": true,
+    "**/.cache": true,
+    "**/node_modules": true,
+    "**/.next": true
+  },
+  "files.watcherExclude": {
+    "**/.gradle/**": true,
+    "**/.cache/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true
+  }
+}
