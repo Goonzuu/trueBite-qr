@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CommerceStatus {
+  pending
+  approved
+  rejected
+}
+
+model Commerce {
+  id        String          @id @default(cuid())
+  name      String
+  rut       String
+  category  String
+  address   String
+  city      String
+  status    CommerceStatus  @default(pending)
+  slug      String?         @unique
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  votes     Vote[]
+
+  @@index([status])
+  @@index([slug])
+  @@map("commerces")
+}
+
+model Vote {
+  id            String    @id @default(cuid())
+  commerceId    String
+  deviceToken   String
+  serviceRating Int       @db.SmallInt
+  valueRating   Int       @db.SmallInt
+  comment       String?
+  createdAt     DateTime  @default(now())
+  commerce      Commerce  @relation(fields: [commerceId], references: [id], onDelete: Cascade)
+
+  @@index([commerceId])
+  @@index([commerceId, deviceToken, createdAt])
+  @@map("votes")
+}
