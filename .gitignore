@@ -34,3 +34,46 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# System files
+.Trash/
+Downloads/
+.cache/
+.cursor/
+.gradle/
+.local/
+.m2/
+.npm/
+.rbenv/
+.sdkman/
+.skiko/
+.swiftpm/
+.viminfo
+.vscode/
+.yarnrc
+.zcompdump
+.zsh_history
+.zsh_sessions/
+.zshrc
+
+# Other projects (explicitly ignore parent directories)
+../trueBite/
+../trueBite-back/
+../benefit-app/
+../benefit-app-back/
+../gardening-app/
+../gardening-app-back/
+../almond-health-app/
+../TrueBiteApp/
+../url-shortener/
+
+# OS
+Applications/
+Desktop/
+Documents/
+Library/
+Movies/
+Music/
+Pictures/
+Project/
+Public/
